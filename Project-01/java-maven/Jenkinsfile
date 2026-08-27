@@ -52,8 +52,10 @@ pipeline {
         }
         stage('Build Image') {
             steps {
-                sh 'export DOCKER_BUILDKIT=0 && docker build --platform linux/amd64 -t "$IMAGE_REPO:$BUILD_NUMBER" -t "$IMAGE_REPO:latest" .'
-            }
+                dir('Project-01/java-maven') {
+                     sh 'export DOCKER_BUILDKIT=0 && docker build --platform linux/amd64 -t "$IMAGE_REPO:$BUILD_NUMBER" -t "$IMAGE_REPO:latest" .'
+               }
+             }
         }
     }
 }
