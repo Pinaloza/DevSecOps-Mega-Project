@@ -11,6 +11,7 @@ pipeline {
     environment {
         SONAR_IP = '172.31.35.212'
         ECR_REGISTRY = '560461521995.dkr.ecr.us-east-1.amazonaws.com'
+        IMAGE_REPO = "${ECR_REGISTRY}/cwvj-devsecops-demo"
     }
 
     stages {
