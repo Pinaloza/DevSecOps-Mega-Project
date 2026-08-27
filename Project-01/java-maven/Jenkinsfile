@@ -6,5 +6,6 @@ pipeline{
                 sh 'trivy fs --exit-code 1 --severity  HIGH,CRITICAL .'
             }
         }
+        stage ('Build & Sonar')
     }
 }
