@@ -74,7 +74,10 @@ pipeline {
         }
         stage('Update Deployment') {
             steps {
-                sh 'sed -i "s|image:.*|image: $IMAGE_REPO:$BUILD_NUMBER|g" deploy-svc.yaml'
+                dir('Project-01/java-maven') {
+
+                     sh 'sed -i "s|image:.*|image: $IMAGE_REPO:$BUILD_NUMBER|g" deploy-svc.yaml'
+                }
             }
         }
     }
