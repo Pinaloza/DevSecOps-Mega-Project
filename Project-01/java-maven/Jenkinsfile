@@ -82,6 +82,7 @@ pipeline {
         }
         stage ('deploy to kubernetes') {
             steps{
+                dir('Project-01/java-maven') {
                     sh ''' #!/bin/bash -l
                         aws eks update-kubeconfig \
                         --region us-east-1 \
@@ -95,7 +96,8 @@ pipeline {
                 kubectl rollout undo -n cwvj-devsecops deployment/cwvj-devsecops-demo || true
                 exit 1
                } 
-'''
+'''     
+               }
             }
         }
     }
