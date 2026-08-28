@@ -3,7 +3,7 @@ kind: ClusterConfig
 
 metadata:
   name: cwvj-devsecops-eks
-  region: ap-south-1
+  region: us-east-1
   version: "1.32"
   tags:
     owner: cloudwithvarjosh
