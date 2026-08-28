@@ -25,11 +25,10 @@ spec:
               app: cwvj-devsecops-demo
       containers:
         - name: cwvj-devsecops-demo
-          image: 386275436648.dkr.ecr.ap-south-1.amazonaws.com/cwvj-devsecops-demo:latest
+          image: 560461521995.dkr.ecr.us-east-1.amazonaws.com/cwvj-devsecops-demo:latest
           ports:
             - containerPort: 8080
 
-            
 ---
 
 # file: k8s/cwvj-devsecops-demo-svc.yaml
