@@ -29,7 +29,7 @@ managedNodeGroups:
 
     ssh:
       allow: true
-      publicKeyName: cwvj-sj-mumbai   # your EC2 key pair name
+      publicKeyName: eastkey1   # your EC2 key pair name
 
     iam:
       withAddonPolicies:
